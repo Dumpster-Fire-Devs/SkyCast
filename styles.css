@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: auto; /* Center the container horizontally */
+}
+
+h2 {
+  margin-top: 0;
+  color: #000;
+}
+
+input[type="text"],
+button {
+  width: calc(100% - 40px); /* Adjusted width to account for padding */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+#weatherInfo {
+  margin-top: 20px;
+  color: #000;
+  font-size: 16px;
+}
