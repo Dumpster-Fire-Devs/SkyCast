@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Weather Extension",
+  "name": "SkyCast",
   "version": "1.0",
-  "description": "View weather for any city.",
+  "description": "View weather for any city on earth.",
   "permissions": [],
   "action": {
     "default_popup": "popup.html",
