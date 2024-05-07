@@ -12,6 +12,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: auto; /* Center the container horizontally */
+  position: relative; /* Position the container relative to the body */
 }
 
 h2 {
@@ -46,4 +47,12 @@ button:hover {
   margin-top: 20px;
   color: #000;
   font-size: 16px;
+}
+
+.time {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: #888;
 }
