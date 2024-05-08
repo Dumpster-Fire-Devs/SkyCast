@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const searchButton = document.getElementById('searchButton');
   const cityInput = document.getElementById('cityInput');
   const weatherInfo = document.getElementById('weatherInfo');
-  const timeDisplay = document.getElementById('time');
+  const lastUpdated = document.getElementById('lastUpdated');
 
   // Function to fetch weather data when the user presses Enter
   cityInput.addEventListener('keyup', function(event) {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function fetchWeather(city) {
-    const apiKey = 'YOUR API KEY';
+    const apiKey = '571a1df27ac8b5151ee3bc7cce5dc929';
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     fetch(apiUrl)
@@ -35,16 +35,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const windSpeed = data.wind.speed;
         const rainfall = data.rain ? data.rain['1h'] : 0;
 
-        weatherInfo.innerHTML = `Weather: ${description}<br>
-                                  Temperature: ${temperature}\u00B0C<br>
-                                  Humidity: ${humidity}%<br>
+        weatherInfo.innerHTML = `Temperature: ${temperature}\u00B0C<br>
+                                  Rainfall: ${rainfall} mm<br>
                                   Wind Speed: ${windSpeed} m/s<br>
-                                  Rainfall: ${rainfall} mm`;
+                                  Humidity: ${humidity}%<br>
+                                  Weather: ${description}`;
 
-        // Update time display
+        // Update last updated time
         const date = new Date();
         const time = `${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`;
-        timeDisplay.innerText = `Last updated: ${time}`;
+        lastUpdated.innerText = `Last updated: ${time}`;
       })
       .catch(error => {
         console.error('Error fetching weather:', error);
